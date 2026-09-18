@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mechddi"
+version = "0.1.0"
+description = "Runnable PyTorch implementation of MechDDI"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.0",
+]
+
+[project.scripts]
+mechddi-train = "mechddi.train:main"
+
+[tool.setuptools.packages.find]
+include = ["mechddi*"]
+
